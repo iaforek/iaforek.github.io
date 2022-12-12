@@ -19,7 +19,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-camera.position.setZ(30);
+// camera.position.setZ(60);
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 // const geometry = new THREE.BoxGeometry(10, 10, 10);
@@ -50,7 +50,9 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('729708.jpg');
+const spaceTexture = new THREE.TextureLoader().load(
+  'https://iaforek.github.io/src/729708.jpg'
+);
 scene.background = spaceTexture;
 
 function moveCamera() {
